@@ -1,0 +1,19 @@
+{
+    "record": {
+        "assignedGroups": [{
+            "effectiveDate": "2022-01-01",
+            "group": {
+                "nameTranslate": "One"
+            },
+            "skills": [{
+                "experienceAsOfDate": "2022-01-01"
+            }]
+        }],
+            "firstName": "aditya",
+                "phones": [{
+                    "phoneNumber": "12344553",
+                    "phoneType": "mobile"
+                }]
+    },
+    "userProfileUpdateOneRecord2": null
+}
