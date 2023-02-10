@@ -5,9 +5,12 @@ const { ApolloServer } = require('apollo-server-express');
 
 
 async function initApolloServer() {
+
+    const connectionString = process.env.connectionString
+    const graphQLPort = process.env.graphQLPort
     const app = express();
     try {
-        const MongoClient = await mongoose.connect("mongodb+srv://admin:passwordone@adityas-m10.4xwip.mongodb.net/?retryWrites=true&w=majority");
+        await mongoose.connect(connectionString);
     } catch (err) {
         console.error(err);
     }
@@ -25,8 +28,8 @@ async function initApolloServer() {
         res.end();
     });
 
-    await new Promise(resolve => app.listen({ port: 4000 }, resolve));
-    console.log(`🚀 Server ready at http://localhost:4000${server.graphqlPath}`);
+    await new Promise(resolve => app.listen({ port: graphQLPort }, resolve));
+    console.log(`🚀 Server ready at http://localhost:${graphQLPort}${server.graphqlPath}`);
 }
 
 initApolloServer();

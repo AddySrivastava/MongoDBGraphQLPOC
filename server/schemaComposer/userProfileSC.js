@@ -48,7 +48,6 @@ async function removePhoneNumber(source, args, context, info) {
 const customizationOptions = {}
 const UserProfileTC = composeMongoose(UserProfile, customizationOptions);
 
-console.log(UserProfileTC.mongooseResolvers.dataLoader());
 //Add needed CRUD UserProfile operations to the GraphQL Schema
 schemaComposer.Query.addFields({
     userProfileById: UserProfileTC.mongooseResolvers.findById(),
