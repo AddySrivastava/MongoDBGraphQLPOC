@@ -54,7 +54,7 @@ The POC is built on taking the below schema as a reference point.
 
 ### Mutations
 
-The POC primarily focuses on the mutations in the GraphQL that natively supports the mongoose schema. Since it uses the graphQL-compose-mongoose schema, the user doesn't need to define the schema in mongoose and then for graphQL, the [https://graphql-compose.github.io/docs/intro/quick-start.html](graphQL-compose) uses the existing mongoose schema and then ingests that schema inside the schema composer to generate the graphQL endpoints. 
+The POC primarily focuses on the mutations in the GraphQL that natively supports the mongoose schema. Since it uses the graphQL-compose-mongoose schema, the user doesn't need to define the schema in mongoose and then for graphQL, the (https://graphql-compose.github.io/docs/intro/quick-start.html)[graphQL-compose] uses the existing mongoose schema and then ingests that schema inside the schema composer to generate the graphQL endpoints. 
 
 Although the composer directly provides raw methods, it is also possible to create your own custom mutations which is exactly what this POC aims to achieve.
 
