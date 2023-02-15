@@ -20,7 +20,6 @@ const AssignedGroupSchema = new mongoose.Schema({
 })
 
 const UserProfileSchema = new mongoose.Schema({
-    id: String,
     firstName: String,
     phones: [{ type: PhoneSchema }],
     assignedGroups: [{ type: AssignedGroupSchema }]
