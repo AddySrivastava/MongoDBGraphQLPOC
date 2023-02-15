@@ -4,7 +4,7 @@ const userProfileSC = require('./schemaComposer/userProfileSC');
 const { ApolloServer } = require('apollo-server-express');
 
 //load env variables
-require('dotenv').config()
+const env = require('dotenv').config({ debug: process.env.DEBUG })
 
 async function initApolloServer() {
 
@@ -20,6 +20,7 @@ async function initApolloServer() {
     const server = new ApolloServer({
         schema: userProfileSC
     });
+
     await server.start();
 
     server.applyMiddleware({ app });
