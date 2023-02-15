@@ -6,13 +6,13 @@ The MongoDB GraphQL POC is based on the graph-compose library and is using the m
 
 ## Setup
 
-Step 1: Clone the repostiory via `git clone https://github.com/Pacifier24/MongoDBGraphQLPOC.git`
+**Step 1**: Clone the repostiory via `git clone https://github.com/Pacifier24/MongoDBGraphQLPOC.git`
 
-Step 2: Run the command `npm install` to install all the dependencies`
+**Step 2**: Run the command `npm install` to install all the dependencies`
 
-Step 3: Run command `npm run server` to run the apollo server on the default port **4000**
+**Step 3**: Run command `npm run server` to run the apollo server on the default port **4000**
 
-Step 4: Open the url http://localhost:4000/graphql to access the apollo server.
+**Step 4**: Open the url http://localhost:4000/graphql to access the apollo server.
 
 ## Description
 
