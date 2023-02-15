@@ -23,7 +23,7 @@ async function userProfileSetNameAndPhoneResolver(source, args, context, info) {
     return { acknowledged: result.acknowledged || false }
 }
 
-async function removeAssignedGroups(source, args, context, info) {
+async function userProfileRemoveAssignedGroups(source, args, context, info) {
 
     let { profileId, assignedGroupId } = args
 
@@ -38,7 +38,7 @@ async function removeAssignedGroups(source, args, context, info) {
     return { acknowledged: result.acknowledged || false }
 }
 
-async function updatePhoneType(source, args, context, info) {
+async function userProfileUpdatePhoneType(source, args, context, info) {
 
     let { profileId, phoneId, phoneType } = args
 
@@ -72,7 +72,7 @@ async function updateAssignedGroupSkillExperienceDate(source, args, context, inf
     return { acknowledged: result.acknowledged || false }
 }
 
-async function removePhoneNumber(source, args, context, info) {
+async function userProfileRemovePhoneNumber(source, args, context, info) {
 
     console.log(args)
 
