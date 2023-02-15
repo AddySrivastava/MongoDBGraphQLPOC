@@ -7,7 +7,7 @@ const { ApolloServer } = require('apollo-server-express');
 async function initApolloServer() {
 
     const connectionString = process.env.connectionString
-    const graphQLPort = process.env.graphQLPort
+    const graphQLPort = process.env.graphQLPort || 4000
     const app = express();
     try {
         await mongoose.connect(connectionString);

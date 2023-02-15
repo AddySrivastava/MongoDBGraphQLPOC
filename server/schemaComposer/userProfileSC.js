@@ -11,10 +11,10 @@ const CustomUpdateResponseTC = schemaComposer.createObjectTC({
 
 async function userProfileSetNameAndPhoneResolver(source, args, context, info) {
 
-    let { userId, firstName, phone } = args
+    let { profileId, firstName, phone } = args
 
     let result = await UserProfile.updateOne(
-        { _id: userId },
+        { _id: profileId },
         {
             $push: { phones: phone },
             $set: { firstName }
@@ -95,8 +95,6 @@ async function userProfileRemovePhoneNumber(source, args, context, info) {
 const customizationOptions = {}
 const UserProfileTC = composeMongoose(UserProfile, customizationOptions);
 
-/*
-TODO: UNCOMMENT IF YOU NEED RAW OPS FOR QUERIES
 schemaComposer.Query.addFields({
     userProfileById: UserProfileTC.mongooseResolvers.findById(),
     userProfileByIds: UserProfileTC.mongooseResolvers.findByIds(),
@@ -106,7 +104,6 @@ schemaComposer.Query.addFields({
     userProfileConnection: UserProfileTC.mongooseResolvers.connection(),
     userProfilePagination: UserProfileTC.mongooseResolvers.pagination(),
 });
-*/
 
 // Add needed CRUD UserProfile operations to the GraphQL Schema
 
@@ -124,7 +121,7 @@ schemaComposer.Mutation.addFields({
     */
     userProfileSetNameAndPhone: {
         type: CustomUpdateResponseTC,
-        args: { userId: 'MongoID!', firstName: 'String!', phone: 'JSON!' },
+        args: { profileId: 'MongoID!', firstName: 'String!', phone: 'JSON!' },
         resolve: userProfileSetNameAndPhoneResolver
     },
     userProfileRemoveAssignedGroups: {
