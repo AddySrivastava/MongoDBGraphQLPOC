@@ -3,11 +3,14 @@ const mongoose = require('mongoose');
 const userProfileSC = require('./schemaComposer/userProfileSC');
 const { ApolloServer } = require('apollo-server-express');
 
+//load env variables
+require('dotenv').config()
+
 
 async function initApolloServer() {
 
-    const connectionString = process.env.connectionString
-    const graphQLPort = process.env.graphQLPort || 4000
+    const connectionString = process.env.MONGO_URL
+    const graphQLPort = process.env.PORT || 4000
     const app = express();
     try {
         await mongoose.connect(connectionString);
