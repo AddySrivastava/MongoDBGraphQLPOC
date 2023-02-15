@@ -6,6 +6,16 @@ The MongoDB GraphQL POC is based on the graph-compose library and is using the m
 
 ## Setup
 
+**Prerequisite**
+Create a `.env` file and add MONGO_URL and PORT as the environment variables
+
+**.env**
+
+```
+MONGO_URL=
+PORT=
+```
+
 **Step 1**: Clone the repostiory via `git clone https://github.com/Pacifier24/MongoDBGraphQLPOC.git`
 
 **Step 2**: Run the command `npm install` to install all the dependencies`

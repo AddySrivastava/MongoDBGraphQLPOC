@@ -6,7 +6,6 @@ const { ApolloServer } = require('apollo-server-express');
 //load env variables
 require('dotenv').config()
 
-
 async function initApolloServer() {
 
     const connectionString = process.env.MONGO_URL
