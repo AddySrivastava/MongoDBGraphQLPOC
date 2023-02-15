@@ -18,8 +18,9 @@ The MongoDB GraphQL POC is based on the graph-compose library and is using the m
 
 The POC is built on taking the below schema as a reference point. 
 
-```
 **UserProfile Schema**
+
+```
 
 { 
       "id": "profileId1", 
